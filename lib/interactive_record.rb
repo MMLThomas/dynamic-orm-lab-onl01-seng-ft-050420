@@ -56,7 +56,7 @@ class InteractiveRecord
   end
   
   def self.find_by(atr)
-    binding.pry
+    #binding.pry
     value = attribute_hash.values.first
     #formatted_value = value.class == Fixnum || Float ? value : "'#{value}'"
     DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{atr.keys[0].to_s} = #{value}") 
