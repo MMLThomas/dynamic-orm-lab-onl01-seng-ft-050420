@@ -56,7 +56,7 @@ class InteractiveRecord
   end
   
   def self.find_by(atr)
-    binding.pry
+    #binding.pry
     DB[:conn].execute("SELECT #{atr} FROM #{table_name} WHERE #{atr.keys} = #{atr.values}") 
     
   end
