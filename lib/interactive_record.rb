@@ -57,8 +57,7 @@ class InteractiveRecord
   
   def self.find_by(atr)
     #binding.pry
-   if DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{atr.keys.first} = #{atr.values.first}") 
-   end
+    DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{atr.keys.first} = #{atr.values.first}") 
   end
   
 
