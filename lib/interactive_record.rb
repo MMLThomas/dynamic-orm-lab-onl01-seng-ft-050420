@@ -59,7 +59,7 @@ class InteractiveRecord
     #binding.pry
     key = atr.keys[0].to_s
     value = atr.values.first
-    #formatted_value = value.class == Fixnum || Float ? value : "'#{value}'"
+    value = value.class == Fixnum || Float ? value : "'#{value}'"
     DB[:conn].execute("SELECT * FROM #{table_name} WHERE #{key} = #{value}") 
     
   end
